@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Slider from './components/Slider.jsx'
+import { css, jsx } from '@emotion/core'
+import firstSlide from './images/firstSlide.svg'
+import secondSlide from './images/secondSlide.svg'
+import thirdSlide from './images/thirdSlide.svg'
 
 function App() {
+  const images = [firstSlide, secondSlide, thirdSlide]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Slider slides={images}/>
   );
 }
+
 
 export default App;
